@@ -1,0 +1,8 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = "Aashray's Blog"
+theme = "m10c"
+author = "aashray"
+description = "software engineer, writing about what I do in my free time"
+github = "https://github.com/AashrayAnand"
+email = "aaanan@microsoft.com"
