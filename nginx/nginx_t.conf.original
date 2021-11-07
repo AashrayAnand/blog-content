@@ -23,7 +23,7 @@ http {
 
         include         {NGINX_ROOT}mime.types;
 
-        # static pages served from public directory
+        # hugo static content served from public directory
         location / {
             root            /Users/aashrayanand/Documents/code/blog/hugo/public/;
             try_files       $uri    $uri/ =404;

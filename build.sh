@@ -75,7 +75,6 @@ sudo cp $CONFIG $TEMPFILE
 
 # string replace with configs
 sudo sed -i'.original' "s%{USER}%${USER}%g" $TEMPFILE
-sudo sed -i'.original' "s%{HUGO_STAT}%${BLOG_ROOT}${HUGO_DIR}%g" $TEMPFILE
 sudo sed -i'.original' "s%{HUGO_PUB}%${HUGO_PUB}%g" $TEMPFILE
 sudo sed -i'.original' "s%{PORT}%${PORT}%g" $TEMPFILE
 sudo sed -i'.original' "s%{SERVER_NAME}%${SERVER_NAME}%g" $TEMPFILE
