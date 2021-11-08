@@ -37,20 +37,22 @@ if [[ $1 -eq 1 ]]; then
     # paramterize for prod configurations
     echo "Configuring nginx for prod..."
     USER="www-data"
-    BINPATH="/usr/sbin/"
+    N_BINPATH="/usr/sbin/"
+    H_BINPATH="/usr/bin/"
     NGINX_ROOT="/etc/nginx/"
     BLOG_ROOT="/home/pi/Documents/blog/"
     HUGO_FLAGS=""
     PORT="80"
 
     # TODO: replace gateway IP with domain name
-    SERVER_NAME="24.17.207.248"
+    SERVER_NAME="10.0.0.121 24.17.207.248"
 else
     # paramterize for prod configurations
     echo "Configuring nginx for dev..."
     USER="aashrayanand staff"
     NGINX_ROOT="/usr/local/etc/nginx/"
-    BINPATH="/usr/local/bin/"
+    N_BINPATH="/usr/local/bin/"
+    H_BINPATH = $N_BINPATH
     BLOG_ROOT="/Users/aashrayanand/Documents/code/blog/"
     HUGO_FLAGS="-D" # build draft posts
     PORT="8080"
@@ -81,20 +83,20 @@ sudo sed -i'.original' "s%{SERVER_NAME}%${SERVER_NAME}%g" $TEMPFILE
 sudo sed -i'.original' "s%{NGINX_ROOT}%"${NGINX_ROOT}"%g" $TEMPFILE
 
 # test new config
-sudo ${BINPATH}${NGINX} -t -c $TEMPFILE
+sudo ${N_BINPATH}${NGINX} -t -c $TEMPFILE
 
 # re-load config if successful, and also re-generate hugo content
 if [[ $? -eq 0  ]]; then
     # generate hugo content
     cd ${BLOG_ROOT}/hugo
-    sudo ${BINPATH}${HUGO} $HUGO_FLAGS
+    sudo ${H_BINPATH}${HUGO} $HUGO_FLAGS
 
     if [[ $? -eq 0 ]]; then
         echo "Re-generated hugo content..."
 
         echo "Re-loading nginx with new config..."
         sudo cp $TEMPFILE $NGINX_CONF
-        sudo ${BINPATH}${NGINX} -s reload
+        sudo ${N_BINPATH}${NGINX} -s reload
 
         echo "Successfully refreshed server and contents. goodbye..."
         exit 0
