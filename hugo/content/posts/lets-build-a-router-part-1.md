@@ -1,8 +1,7 @@
 ---
 author: "Aashray"
 include_toc: true
-description: "A few words here and there about what I'm up to."
-title: "Lets Build A Router Part 1"
+title: "Let's Build A Router Part 1"
 date: 2021-10-31T17:15:06-07:00
 draft: false
 ---
