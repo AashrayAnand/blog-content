@@ -59,7 +59,7 @@ else
     SERVER_NAME="localhost"
 fi
 
-
+HUGO_FLAGS="${HUG_FLAGS} --verbose"
 HUGO_PUB="${BLOG_ROOT}${HUGO_PUB}"
 NGINX_CONF="${NGINX_ROOT}${NGINX_CONF}"
 
