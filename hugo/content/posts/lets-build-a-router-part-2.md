@@ -7,7 +7,7 @@ date: 2021-11-08T08:40:29-08:00
 draft: false
 ---
 
-***Welcome back! If you followed part 1 of this series, then we’ll be answering a lot of the questions you may have had from last time, and if not, I’d highly suggest reading [part 1](/posts/8-bits-only-lets-build-a-router-part-2.html) before we continue our journey to building a router.***
+***Welcome back! If you followed part 1 of this series, then we’ll be answering a lot of the questions you may have had from last time, and if not, I’d highly suggest reading [part 1](/posts/lets-build-a-router-part-1/) before we continue our journey to building a router.***
 
 To recap, we’ve set up our 3 virtual networks, and we’ve configured a router with one network adapter connected to the switches of each private network, and a 4th network adapter connected to a switch shared with our host machine’ network adapter, thus exposing Internet access to our router. Our network topology looks like below:
 
