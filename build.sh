@@ -38,7 +38,7 @@ if [[ $1 -eq 1 ]]; then
     echo "Configuring nginx for prod..."
     USER="www-data"
     N_BINPATH="/usr/sbin/"
-    H_BINPATH="/usr/bin/"
+    H_BINPATH="/snap/bin/"
     NGINX_ROOT="/etc/nginx/"
     BLOG_ROOT="/home/pi/Documents/blog/"
     HUGO_FLAGS=""
