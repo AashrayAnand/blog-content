@@ -17,11 +17,11 @@ email = "aaanan@microsoft.com"
     icon = "twitter"
     name = "Twitter"
     url = "https://twitter.com/anand_aashray"
-
-  # Red theme
+	
+  #Default theme
   [params.style]
-    darkestColor = "#d35050"
-    darkColor = "#212121"
-    lightColor = "#d6d6d6"
-    lightestColor = "#d3d3d3"
-    primaryColor = "#ffffff"
+    darkestColor = "#242930"
+    darkColor = "#353b43"
+    lightColor = "#afbac4"
+    lightestColor = "#ffffff"
+    primaryColor = "#57cc8a"

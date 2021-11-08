@@ -88,7 +88,7 @@ sudo ${N_BINPATH}${NGINX} -t -c $TEMPFILE
 # re-load config if successful, and also re-generate hugo content
 if [[ $? -eq 0  ]]; then
     # generate hugo content
-    cd ${BLOG_ROOT}/hugo
+    cd ${BLOG_ROOT}/${HUGO}
     sudo ${H_BINPATH}${HUGO} $HUGO_FLAGS
 
     if [[ $? -eq 0 ]]; then
