@@ -1,12 +1,15 @@
 ---
-title: "8 Bits Only: Lets Build A Router Part 1"
+author: "Aashray"
+include_toc: true
+description: "A few words here and there about what I'm up to."
+title: "Lets Build A Router Part 1"
 date: 2021-10-31T17:15:06-07:00
 draft: false
 ---
 
-#### Today I’m going to describe the first steps of how I set up a virtual router, to connect multiple private local access networks of virtual machines together, and eventually, to the Internet.
+***Today I’m going to describe the first steps of how I set up a virtual router, to connect multiple private local access networks of virtual machines together, and eventually, to the Internet.***
 
-Obviously, we first need to understand, what is a router? It’s something we all have in our homes, but in the eyes of most, is just a magical tunnel to the Internet.
+*Obviously, we first need to understand, what is a router? It’s something we all have in our homes, but in the eyes of most, is just a magical tunnel to the Internet.*
 
 ![your router visualized gif](https://media.giphy.com/media/IWp7xsHXRjOZ1hsg5y/giphy.gif)
 
@@ -25,13 +28,13 @@ There’s countless articles on the internet for how to set up an Ubuntu VM usin
 
 I’ve created 7 VMs, which I refer to as RedA, RedB, BlueA, BlueB, GreenA, GreenB, and Router. Each of the sets of color is the pair of VMs which I will isolate to their own private network (more on how to do this in the next section). The last VM, as the name suggests, is the router, which will be hooked up to each private network, and to the Internet.
 
-Each of these VMs is running Ubuntu Server LTS, which has an ISO available here
+*Each of these VMs is running Ubuntu Server LTS, which has an ISO available here*
 
 ### Private Network Setup
 
 For my network configuration, I’ve set up 3 isolated networks, each including a pair of VMs, connected to each other by a virtual switch. A switch is simply an input-output device, which routes traffic to and from hosts connected to the switch, via ethernet. You may have seen a switch like below before in your home or work network setup, creating a network of devices connected to the switch via ethernet cables.
 
-> Put simply, a virtual switch accomplishes the same task of routing traffic between connected hosts, virtualized on your own computer, amazing!
+*Put simply, a virtual switch accomplishes the same task of routing traffic between connected hosts, virtualized on your own computer, amazing!*
 
 A virtual switch in this scenario enables us to set up a VLAN, or a virtual local area network, where a local area network is a network partitioned and isolated at the data link/L2 layer of the network stack, or sometimes referred to as the ethernet layer (as this is the predominant L2 protocol).
 
@@ -59,7 +62,7 @@ At this point, we have configured 3 switches, Red, Green, and Blue, and configur
 
 ![vlan visual 1 image](/vlan_visual.png)
 
-The key takeaway from the existing configuration is that intra-network communication is possible, but inter-networking is not, and as a result, none of these private networks can access the Internet.
+*The key takeaway from the existing configuration is that intra-network communication is possible, but inter-networking is not, and as a result, none of these private networks can access the Internet.*
 
 ### Hooking up the router
 
