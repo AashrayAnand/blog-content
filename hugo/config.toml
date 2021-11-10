@@ -6,9 +6,19 @@ github = "https://github.com/AashrayAnand"
 email = "aaanan@microsoft.com"
 
 [params]
-    author = "Aashray Anand"
-    description = "Software engineer, writing about what I do in my free time"
+  author = "Aashray Anand"
+  description = "Software engineer, writing about what I do in my free time"
   menu_item_separator = " - "
+  
+  #Green theme
+  [params.style]
+    darkestColor = "#315659"
+    darkColor = "#253031"
+    lightColor = "#96a879"
+    lightestColor = "#fff"
+    primaryColor = "#dad865" 
+  
+  # Socials
   [[params.social]]
     icon = "github"
     name = "Github"
@@ -17,11 +27,4 @@ email = "aaanan@microsoft.com"
     icon = "twitter"
     name = "Twitter"
     url = "https://twitter.com/anand_aashray"
-	
-  #Default theme
-  [params.style]
-    darkestColor = "#242930"
-    darkColor = "#353b43"
-    lightColor = "#afbac4"
-    lightestColor = "#ffffff"
-    primaryColor = "#57cc8a"
+

@@ -89,6 +89,11 @@ sudo ${N_BINPATH}${NGINX} -t -c $TEMPFILE
 if [[ $? -eq 0  ]]; then
     # generate hugo content
     cd ${BLOG_ROOT}/${HUGO}
+    
+    # drop existing generated content
+    rm -r public 2> /dev/null
+    rm -r resources 2> /dev/null
+
     sudo ${H_BINPATH}${HUGO} $HUGO_FLAGS
 
     if [[ $? -eq 0 ]]; then
