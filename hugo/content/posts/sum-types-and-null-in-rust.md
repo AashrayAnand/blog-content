@@ -60,28 +60,29 @@ represent values in rust that may or not exist.
     }
 
 This is just a more generalized form of what we have defined in our TreeNode enum. Option is a sum type, where we 
-either have a value T with type Some, or we have no value with type None. The ambiguity of whether a value with a
-concrete type X having an underlying value that can actually be interpreted as this type is completely gone!
+either have a value T with type Some, or we have no value with type None. There's no ambiguity of whether a value with
+type X actually has a value that can be interpreted as that type, as it would have an entirely different type in that case.
 
-Consider the equivalent to this sum type in C++, which instead has a single type with nullable values. If we were to 
-miss our null pointer check for case below, then the behavior we get is undefined, and is only exposed at runtime.
+Consider the alterntive in C++, which is type with nullable values. If we were to miss our null pointer check for the case 
+below, then the behavior we get is undefined, and is **only exposed at runtime**.
 
     int* bad_value = buggy_function_sometimes_null();
     int* good_value = buggy_function_sometimes_null();
 
-In comparison, rust won't ever even allow garbage values to masquerade as a valuable type like this case, see the alternative
-below using options vs a nullable type.
+In comparison, garbage values in rust won't masquerade as same type as actual values. See the alternative to above in rust,
+where an Option is used to distinguish a value that may not exist, instead of a single type.
 
 ![option_type_bad_code](/option_type_bad_code.png)
 
-Then, if we have a case of some buggy code like above, where we try to use some value that is "null" (or better said, 
-an instance of the None type), the **compiler** will stop us, and require we explicitly ensure that
-we are interacting with the correct concrete type. 
+Then, if we have some buggy code like above, where we try to use some potentially garbage value (an instance of the None type), 
+the **compiler** will stop us, and require we explicitly ensure that we are interacting with the correct concrete type. 
 
 ![option_type_error](/option_type_error.png)
 
-No longer can a missed null check slip by! (see the fixed code below)
+No longer can a missed "null" check slip by, the compiler is now a null checker! (see the fixed code below)
 
 ![option_type_good_code](/option_type_good_code.png)
 
-[Some more good reading](https://blog.waleedkhan.name/union-vs-sum-types/) about union and sum types, one of the many functional programming features to grow into heavy favor
+Hopefully this was enough to show why sum types bring entirely different level of safety to programming in scenarios with 
+ambigous behavior. Here's[Some more good reading](https://blog.waleedkhan.name/union-vs-sum-types/) about union and sum types, one of the many 
+functional programming features to grow into heavy favor in many modern languages like rust
