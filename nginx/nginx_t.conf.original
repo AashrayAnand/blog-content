@@ -1,4 +1,4 @@
-user www-data;
+user aashrayanand staff;
 worker_processes  1;
 
 events {
@@ -32,8 +32,8 @@ http {
 
     # main server config
     server {
-        listen       80;
-        server_name  10.0.0.121 24.17.207.248;
+        listen       8080;
+        server_name  localhost;
 
         index        index.html;
 
@@ -41,7 +41,7 @@ http {
 
         # hugo static content served from public directory
         location / {
-            root			/home/pi/Documents/blog/hugo/public/;
+            root			/Users/aashrayanand/Documents/code/blog/hugo/public/;
             try_files			$uri    $uri/ =404;
       	    
 	}

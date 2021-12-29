@@ -6,7 +6,27 @@
     <description>Recent content on Aashray&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Nov 2021 08:40:29 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Dec 2021 11:17:20 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sum Types and Null in Rust</title>
+      <link>/posts/sum-types-and-null-in-rust/</link>
+      <pubDate>Wed, 29 Dec 2021 11:17:20 -0800</pubDate>
+      
+      <guid>/posts/sum-types-and-null-in-rust/</guid>
+      <description>Sum types are definitely a step in a different direction for rust from C-style languages. They let you define an enumeration of types, and then create instance of these enumerations which are one of the set of types they specify. See an example below (of a binary search tree definition)
+pub enum Tree&amp;lt;T&amp;gt; { TreeNode(T, Box&amp;lt;TreeNode&amp;lt;T&amp;gt;&amp;gt;, Box&amp;lt;TreeNode&amp;lt;T&amp;gt;&amp;gt;), Nil }  What we see here is an example of using an enum to indicate that an instance of a Tree can take on one of a set of fixed types, either a TreeNode, or Nil.</description>
+    </item>
+    
+    <item>
+      <title>What Developers Can Learn From Water Heaters</title>
+      <link>/posts/what-developers-can-learn-from-water-heaters/</link>
+      <pubDate>Wed, 10 Nov 2021 10:17:53 -0800</pubDate>
+      
+      <guid>/posts/what-developers-can-learn-from-water-heaters/</guid>
+      <description>I’ve never really understood how a water heater works. It may sound dumb, but it’s the truth.
+I know that I have a water heater, I know that I pay a utilities bill for my water heater, and I know that I can rest assured at night that when I shower it will be with hot water, but how that happens has never been something I’ve known or thought much about.</description>
+    </item>
+    
     <item>
       <title>Let&#39;s Build a Router Part 2</title>
       <link>/posts/lets-build-a-router-part-2/</link>

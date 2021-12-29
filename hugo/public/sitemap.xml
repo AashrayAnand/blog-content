@@ -3,12 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-11-08T08:40:29-08:00</lastmod>
-  </url><url>
-    <loc>/posts/lets-build-a-router-part-2/</loc>
-    <lastmod>2021-11-08T08:40:29-08:00</lastmod>
+    <lastmod>2021-12-29T11:17:20-08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2021-12-29T11:17:20-08:00</lastmod>
+  </url><url>
+    <loc>/posts/sum-types-and-null-in-rust/</loc>
+    <lastmod>2021-12-29T11:17:20-08:00</lastmod>
+  </url><url>
+    <loc>/posts/what-developers-can-learn-from-water-heaters/</loc>
+    <lastmod>2021-11-10T10:17:53-08:00</lastmod>
+  </url><url>
+    <loc>/posts/lets-build-a-router-part-2/</loc>
     <lastmod>2021-11-08T08:40:29-08:00</lastmod>
   </url><url>
     <loc>/posts/lets-build-a-router-part-1/</loc>
