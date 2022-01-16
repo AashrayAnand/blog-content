@@ -84,5 +84,5 @@ No longer can a missed "null" check slip by, the compiler is now a null checker!
 ![option_type_good_code](/option_type_good_code.png)
 
 Hopefully this was enough to show why sum types bring entirely different level of safety to programming in scenarios with 
-ambigous behavior. Here's[Some more good reading](https://blog.waleedkhan.name/union-vs-sum-types/) about union and sum types, one of the many 
+ambigous behavior. Here's [Some more good reading](https://blog.waleedkhan.name/union-vs-sum-types/) about union and sum types, one of the many 
 functional programming features to grow into heavy favor in many modern languages like rust
