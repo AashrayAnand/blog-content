@@ -82,7 +82,7 @@ the bytes that make up "hello" are on the heap. If we were to allow making copie
 
 It's worth pointing out explicitly that passing values to a function that are not copyable has the same semantics as above, like the below example.
 
-![move_no_return](/move_result.png)
+![move_no_return](/move_no_return.png)
 
 In this case, the function we passed s1 to is now the owner of this value, and referencing s1 further after this will cause a similar compilation error. To move a value to a function and get ownership back, we must return this value in the function we moved it to, like below
 
